@@ -1,0 +1,28 @@
+- Configure module for per web request lifestyle (if needed)
+- PerRequestLifestyle - add to web.config 
+	-<system.web>/<httpModules> for IIS6
+	-<system.webServer>/<modules> for IIS7
+
+	<add name="PerRequestLifestyle" type="Castle.MicroKernel.Lifestyle.PerWebRequestLifestyleModule, Castle.Windsor" />
+	
+-If working with multiple versions of windsor, here is a dependent assembly mapping (nuget will do this for you too), put this in your app.config or web.config
+	
+	<dependentAssembly>
+		<assemblyIdentity name="Castle.Windsor" publicKeyToken="407dd0808d44fbdc" culture="neutral" />
+		<bindingRedirect oldVersion="2.5.0.0-2.6.0.0" newVersion="2.5.4" />
+	</dependentAssembly>
+
+-Create application container in app startup (Web - HttpApplication / Service - EndpointConfig)
+	
+	Use ExtendedContainer from GotFour.Windsor to get started (provides common setup of container and CSL integration)
+	Check container is valid on app startup via GotFour.Windsor's Testing.ContainerValidationExtensions
+	
+-Use registries via GotFour.Windsor's ExtendedRegistryBase
+	- Supports conventions and scanning for dependencies as well as fluent registrations
+	
+-Web projects
+	- Extend the DefaultControllerFactory with windsor support via WindsorControllerFactory (code)
+		Supports controller and action invoker creation via windsor
+
+- Integration tests 
+	Add these to run an integration nunit test to check your web and endpoint containers (after they have registries installed), these are a great way to find problems without running the app, or to fix problems without running the app.
