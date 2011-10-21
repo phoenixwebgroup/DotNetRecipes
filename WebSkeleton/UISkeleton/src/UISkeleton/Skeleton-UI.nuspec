@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Skeleton-UI</id>
+    <version>1.0</version>
+    <title>UI Skeleton</title>
+    <authors>https://github.com/g0t4/DotNetRecipes</authors>
+    <owners />
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A skeleton of our UI components for a new web application.</description>
+  </metadata>
+  <files>
+    <file src="Infrastructure\IRunOnApplicationStart.cs" target="content\IRunOnApplicationStart.cs" />
+  </files>
+</package>
