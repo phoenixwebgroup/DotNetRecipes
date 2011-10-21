@@ -1,0 +1,103 @@
+1. Repository (Customer.ProjectName)
+2. Make sure dev box is setup
+	- VS 2010
+	- NuGet (http://nuget.org/, http://nuget.codeplex.com/releases)
+		- CLI 
+			Add to path
+		- Package Explorer
+		- VS extension 
+			(install via Tools -> Extension Manager)
+3. Template to start with 
+	- NUGET packages
+		- gitignore file / hgignore file
+		- Create a VS solution / projects
+			- Naming conventions
+			- Rake script to give it a customer name and project name and have it follow our conventions
+			- could use CLI or VS templates
+		- Bring in NuGet recipe(s) that is applicable
+			- Base recipe
+				- Castle.Core
+				- Castle.Windsor
+				- log4net
+				- CommonServiceLocator
+				- CommonServiceLocator.WindsorAdapter
+				- GotFour.Windsor
+				- PagedList
+				- DotNetExtensions-Base
+					- OneAtATimeQueue
+					- PartitionSelectExtensions
+					- OnUnhandledException.cs
+					- SelfServiceAttribute
+				- FluentValidation
+				- ExpertPdf
+			- Web recipe
+				- jQuery.Validation
+				- jQuery.UI.Combined
+				- jQuery
+				- Modernizr
+				- jQuery.Templates
+				- knockoutjs
+				- Spark
+				- Spark.Web.Mvc3
+				- Knockout.Mapping
+				- linq.js
+				- DotNetExtensions-HtmlTags
+				- DotNetExtensions-UiConventions
+				- DotNetExtensions-UiConventions.ExpertPdf
+			- Service recipe
+				- NServiceBus
+				- DotNetExtensions-Messaging
+			- Web+Service recipe
+				
+			- Mongo recipe
+				- mongocsharpdriver
+			- SQL Servier package
+				- add partial configs for dev, beta and prod connection strings
+				- DotNetExtensions-NHibernate
+			- Optional
+				- Kiodex.Client
+				- DotNetExtensions-Financial
+	-Code to copy (we need to put in packages)
+		-ApplicationContainer : WindsorContainer
+		-ContainerTestExtensions
+		-IRunOnApplicationStart
+		- Pipeline (variants that we can share)
+		-UI
+			-RequiresThatAttribute (example that has to be changed)
+				-AuthorizeAccessFilter
+			RouteRegistry (code)
+			SettlementsApplication (code)
+			-Conventions
+				- lots of todos/throw new notimplementexception
+				- PageActionsSecurity/ NoPageActionsSecurity
+				FubuRegistry
+				ModelBindersInit
+				SettlementsHtmlConventions
+			-Auth
+				-Authentication
+				-AuthenticationController
+				-AuthenticationModule
+			-Filters
+				ExportFilter
+				OnUnhandledException
+				SetJsonRequestBehaviorGlobally
+				TableFilter
+			-Windsor
+				LocatorAsyncActionInvoker
+				WindsorControllerFactory
+			-Spark
+				MySparkView
+			-NServiceBus
+				-NServiceBusLauncher
+				-WebBusWriter
+		-Web
+			config folder
+			partial config ex?
+			bindings for spark
+		- WebRegistry, ServiceRegistry
+		-NHib
+			- DecimalScaleConvention (put into NHibExt)
+			- EntityBase (code)
+			- IRepository/ActualImplementation (code)
+			- SettlementsSessionBuilder (code)
+			- Caching code examples

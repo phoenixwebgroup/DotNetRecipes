@@ -1,0 +1,16 @@
+And for our own repos across the board I'd like to follow (and i typed this up quick so it sounds DOGMATIC, but it is not, so please feel free to challenge this, I've tried to include reasons for each policy):
+
+    Migrate to using NuGet and for now set it up to not checkin 3rd party libs
+        Why not checkin 3rd party dlls:
+            They are someone else's to version, we aren't changing them so why would we track anything but a version number?
+            NuGet helps us track versions so we don't need this bloat in our repos
+            Repo bloat (esp if we rev internal things frequently)
+        I'm more than happy to help migrate existing projects, maybe I should teach someone so they can do this for us on everyone, volunteers?
+    Release branch policy
+        Always use Beta/Prod release branches, merge to them from master
+        Fix bugs in prod/beta on the prod/beta branch, and then merge/cherry pick back to master
+            If they are large, you can Bug branch from the same point on master as the Prod branch has and fix that way, merge into master and then merge the Bug branch into prod too
+        I like to see these branches so I know what version of what code is where
+    Feature branches
+        Use these as LITTLE as possible, they decrease integration and are generally a merge nightmare
+        Don't use these if you are working alone on a project, only with other team members
