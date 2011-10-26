@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+    <title><use:title/></title>
+	<Includes/>
+	!{Html.Base()}
+    <use:head/>
+</head>
+<global type="bool" ShowSpinner="true"/>
+<body>
+	<Menu/>
+	<use:belowMenu/>
+    <div id="main">
+		<AjaxLoading/>
+		<div>
+			<use:view/>
+		</div>
+		<br style="clear: both"/>
+        <div id="footer">
+            <p>Copyright &copy; 2011</p>
+        </div>
+    </div>
+</body>
+</html>

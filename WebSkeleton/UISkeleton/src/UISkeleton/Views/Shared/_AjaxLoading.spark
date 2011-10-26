@@ -1,0 +1,10 @@
+<if condition="ShowSpinner">
+	<div class="spinner">
+		<img src="~/Content/images/ajax-loader.gif" style="margin-right: 5px;" />
+		Working ...
+	</div>
+
+	<div class="ajaxError">
+		<div id="errorMessage"></div>
+	</div>
+</if>

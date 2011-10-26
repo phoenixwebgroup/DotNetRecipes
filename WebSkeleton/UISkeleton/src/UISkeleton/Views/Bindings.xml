@@ -1,0 +1,57 @@
+<bindings>
+	<element name="Stylesheet">Html.Stylesheet('@src').RemoveAttr("media")</element>
+	<element name="Script">Html.ScriptInclude('@src')</element>
+	
+	<element name="SaveOrCancel">ViewConventionExtensions.SaveOrCancel()</element>
+	<element name="MakeFormsAjax">Ajax.MakeFormsAjax()</element>
+	<element name="UseClientSideValidation">Html.ClientSideValidation()</element>
+	<element name="FilterFormAutoSubmit">Html.ScriptInclude("FilterFormAutoSubmit.js")</element>
+	<element name="UseRowSelect">Html.ScriptInclude("PageActions.RowSelect.js")</element>
+
+	<element name="Input">Html.InputFor(x => x.@For).AddClasses2("@class")</element>
+	<element name="Input">Html.InputFor(x => x.@For)</element>
+	<element name="Editor">Html.EditTemplateFor(x => x.@For).AddClasses2("@class")</element>
+	<element name="Editor">Html.EditTemplateFor(x => x.@For)</element>
+	<element name="Display">Html.DisplayTemplateFor(x => x.@For)</element>
+	<element name="Filter">Html.FilterFor(x => x.@For)</element>
+	<element name="Label">Html.LabelFor(x => x.@For)</element>
+	<element name="Value">Html.DisplayFor(x => x.@For)</element>
+	<element name="HiddenInput">Html.HiddenFor(x => x.@For)</element>
+
+	<element name="KoEditor">Html.KnockoutEditTemplateFor(x => x.@For).AddClasses2("@class")</element>
+	<element name="KoEditor">Html.KnockoutEditTemplateFor(x => x.@For)</element>
+	<element name="KoDisplay">Html.KnockoutDisplayTemplateFor(x => x.@For)</element>
+	
+	<element name="Section">
+		<start>"&lt;fieldset class=\"@class\"&gt; &lt;legend&gt;@title&lt;/legend&gt;"</start>
+		<end>"&lt;/fieldset&gt;"</end>
+	</element>
+
+	<element name="Section">
+		<start>"&lt;fieldset&gt;&lt;legend&gt;@title&lt;/legend&gt;"</start>
+		<end>"&lt;/fieldset&gt;"</end>
+	</element>
+
+	<element name="Section">
+		<start>"&lt;fieldset&gt;"</start>
+		<end>"&lt;/fieldset&gt;"</end>
+	</element>
+
+	<element name="Column">
+		<start>"&lt;div style='float:left;width:@width;padding-right:10px;'&gt;"</start>
+		<end>"&lt;/div&gt;"</end>
+	</element>
+
+	<element name="Column">
+		<start>"&lt;div style='float:left;width:400px;padding-right:10px;'&gt;"</start>
+		<end>"&lt;/div&gt;"</end>
+	</element>
+
+	<element name="Reset">"&lt;div style='clear: both;'&gt;&lt;/div&gt;"</element>
+
+	<element name="KnockoutModel">new KnockoutSerializer&lt;@For&gt;().WriteJavascript()</element>
+	<element name="Serialize">Serialize.Javascript(@Object)</element>
+	<element name="Render">#Html.RenderAction("@Action");</element>
+	<element name="AuditBid">#Html.RenderAction("BidLastEdited", "Auditing", new {bidNumber = Model.BidNumber, path = "@Path"});</element>
+	
+</bindings>

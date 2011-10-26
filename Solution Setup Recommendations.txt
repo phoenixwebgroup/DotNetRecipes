@@ -1,0 +1,14 @@
+-Web project (going forward will have UI and Web in it)
+-Core project named after the domain
+	-Infrastructure folder is ok here
+	-Settings typically go here to share with Web
+	-Ok to put common views here that you use in the service.
+-Endpoint for a service
+-Tests (unit tests, automated tests that are fast)
+-IntegrationTests (slower tests)
+
+Optional
+-Client wrapper - for hitting web services from other apps
+	-Contracts project for the formats
+
+-Avoid using company names in Namespaces, not really necessary

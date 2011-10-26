@@ -1,0 +1,12 @@
+<use master="Site"/>
+
+<MakeFormsAjax/>
+
+<global type="string" formAction="null"/>
+<form method="post" action="!{formAction}">
+
+	<use:view/>
+	
+	<br style="clear: both;"/>
+	<SaveOrCancel/>
+</form>

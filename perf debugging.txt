@@ -1,0 +1,9 @@
+Performance Areas
+-Deferred Enumeration
+	-Code patterns (deciding where to bring things in memory with linq ToList/ToArray)
+-N+1 query
+	Detection
+		-Profiling
+	Fixes
+		-Batch loading
+		-Caching

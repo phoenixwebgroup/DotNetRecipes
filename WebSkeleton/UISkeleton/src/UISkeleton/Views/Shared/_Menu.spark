@@ -1,0 +1,6 @@
+<var menu="ViewData[UI.Application.InjectMenuDataFilter.MenuDataKey] as HbtMenu" />
+<div id="menucontainer">
+	<if condition=" menu != null && menu.Visible">
+		!{menu.GetMenu(Url)}
+	</if>
+</div>

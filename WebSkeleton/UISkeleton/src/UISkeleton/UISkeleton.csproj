@@ -123,8 +123,17 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Skeleton-UI.nuspec" />
+    <None Include="Views\Shared\AjaxForm.spark" />
+    <None Include="Views\Shared\Site.spark" />
+    <None Include="Views\Shared\TwoColumnForm.spark" />
+    <None Include="Views\Shared\_AjaxLoading.spark" />
+    <None Include="Views\Shared\_Includes.spark" />
+    <None Include="Views\Shared\_KoPager.spark" />
+    <None Include="Views\Shared\_Menu.spark" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Views\Bindings.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

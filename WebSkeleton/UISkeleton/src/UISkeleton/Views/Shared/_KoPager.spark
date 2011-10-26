@@ -1,0 +1,12 @@
+<div data-bind="template: 'KoPager'"></div>
+<script id="KoPager" type="html/javascript">
+	<div id="pager">
+		<ul class="pages">
+			{{each(i) ko.utils.range(1, MaxPageIndex)}}
+				<li class="pgEmpty" data-bind="click: function() { GoToPage(i) }, css: { pgCurrent: i == CurrentPage() }">
+					${"${ i + 1 }"}
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</script>

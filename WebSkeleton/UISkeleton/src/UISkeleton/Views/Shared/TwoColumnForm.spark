@@ -1,0 +1,15 @@
+<use master="Site"/>
+
+<MakeFormsAjax/>
+<global type="string" formAction="null"/>
+<form method="post" action="!{formAction}">
+	<div style="float:left;width:400px;padding-right:10px;">
+		<use:firstColumn />
+	</div>
+	<div style="float:left;">
+		<use:secondColumn />
+	</div>
+	<br style="clear: both;"/>
+	<br />
+	<SaveOrCancel/>
+</form>
