@@ -1,0 +1,7 @@
+-Use NServiceBus (with included topshelf)
+	-Is getting drag and drop app restart in v3 from an update from topshelf (so you can do things like IIS)
+	-EndpointConfig - like HttpApplication 
+	-Resourcse for NSB configs and a GUIDE ourselves
+-Use Reactive Extensions
+-Use TaskParallelLibrary
+-Use Emailers in DotNetExtensions (so you get debug emailing for free)
