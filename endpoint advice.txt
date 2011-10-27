@@ -5,3 +5,11 @@
 -Use Reactive Extensions
 -Use TaskParallelLibrary
 -Use Emailers in DotNetExtensions (so you get debug emailing for free)
+
+Advice on how to use sessions in a service context and share them through a call context
+-Read only stuff use a static context accessor like a DataContext in Linq2Sql
+-Domain modifications should use an aspect less session
+
+Framework ideas:
+-Need to show how to do cancellation and roll this into our service framework samples and monitoring page.
+-Restart service from monitor page (send standard restart message)
