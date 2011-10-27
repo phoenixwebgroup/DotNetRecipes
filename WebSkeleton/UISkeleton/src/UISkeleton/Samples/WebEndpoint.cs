@@ -1,14 +1,11 @@
 namespace UISkeleton.Samples
 {
 	using System.Web;
-	using System.Web.Mvc;
 	using BclExtensionMethods;
 	using Castle.MicroKernel.Registration;
 	using Castle.Windsor;
 	using GotFour.Windsor;
-	using HtmlTags.UI.Helpers;
 	using Infrastructure;
-	using Spark.Web.Mvc;
 
 	public class WebEndpoint : HttpApplication
 	{
@@ -18,9 +15,6 @@ namespace UISkeleton.Samples
 			LoadRegistrations(Container);
 			ScanIn<IConfigureOnStartup>(Container);
 			RunStartupConfigurations(Container);
-			ViewEngines.Engines.Add(new SparkViewFactory());
-			HtmlContentExtensions.DefaultScriptLocation = "~/Scripts/";
-			HtmlContentExtensions.DefaultStyleSheetLocation = "~/Content/css/";
 		}
 
 		protected ExtendedContainer Container

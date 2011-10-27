@@ -108,6 +108,8 @@
     <Compile Include="Infrastructure\SetupControllerFactory.cs" />
     <Compile Include="Infrastructure\TableFilter.cs" />
     <Compile Include="Infrastructure\WindsorControllerFactory.cs" />
+    <Compile Include="Samples\ConfigureSpark.cs" />
+    <Compile Include="Samples\ConfigureConventionsContentPathing.cs" />
     <Compile Include="Samples\SetupMessageBus.cs" />
     <Compile Include="Samples\PageActionsSecurity.cs" />
     <Compile Include="Samples\RouteRegistry.cs" />
