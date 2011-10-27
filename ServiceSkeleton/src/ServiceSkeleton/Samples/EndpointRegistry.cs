@@ -7,7 +7,7 @@
 	{
 		public EndpointRegistry()
 		{
-			ScanMyAssemblyFor<IRunOnApplicationStart>();
+			ScanMyAssemblyFor<IConfigureOnStartup>();
 		}
 	}
 }

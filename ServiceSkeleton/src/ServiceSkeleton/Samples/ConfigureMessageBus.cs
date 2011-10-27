@@ -3,9 +3,9 @@
 	using Castle.Windsor;
 	using Infrastructure;
 
-	public class ConfigureMessageBus : IRunOnApplicationStart
+	public class ConfigureMessageBus : IConfigureOnStartup
 	{
-		public void Start(IWindsorContainer container)
+		public void Configure(IWindsorContainer container)
 		{
 			// todo if you need a message context, bring the message bus framwork in
 			//MessageBusConfiguration.ForService();

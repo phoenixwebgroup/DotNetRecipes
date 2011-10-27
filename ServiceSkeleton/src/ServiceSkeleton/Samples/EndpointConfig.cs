@@ -40,8 +40,8 @@
 
 		private static void RunApplicationStartupComponents(IWindsorContainer container)
 		{
-			var starters = container.ResolveAll<IRunOnApplicationStart>();
-			Array.ForEach(starters, i => i.Start(container));
+			var starters = container.ResolveAll<IConfigureOnStartup>();
+			Array.ForEach(starters, i => i.Configure(container));
 		}
 
 		public static IWindsorContainer GetContainer()

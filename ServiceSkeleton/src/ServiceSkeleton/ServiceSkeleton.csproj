@@ -116,7 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Infrastructure\DailyTask.cs" />
-    <Compile Include="Infrastructure\IRunOnApplicationStart.cs" />
+    <Compile Include="Infrastructure\IConfigureOnStartup.cs" />
     <Compile Include="Infrastructure\Status\IHaveATaskMonitor.cs" />
     <Compile Include="Infrastructure\Status\TaskMonitor.cs" />
     <Compile Include="Samples\CacheHandler.cs" />
@@ -129,6 +129,7 @@
     <Compile Include="Infrastructure\Status\GetServiceStatus.cs" />
     <Compile Include="Infrastructure\Status\IHaveStatusToReport.cs" />
     <Compile Include="Infrastructure\Status\ServiceStatusResponse.cs" />
+    <Compile Include="Samples\ThingThatRunsAtStartup.cs" />
     <Compile Include="Samples\UnhandledTaskExceptions.cs" />
     <Compile Include="Samples\ValidateContainerOnStartup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

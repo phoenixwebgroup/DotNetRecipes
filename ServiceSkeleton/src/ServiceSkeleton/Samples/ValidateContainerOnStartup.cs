@@ -5,9 +5,9 @@
 	using GotFour.Windsor.Testing;
 	using Infrastructure;
 
-	public class ValidateContainerOnStartup : IRunOnApplicationStart
+	public class ValidateContainerOnStartup : IConfigureOnStartup
 	{
-		public void Start(IWindsorContainer container)
+		public void Configure(IWindsorContainer container)
 		{
 			ExtendedContainer.Instance.ExpectAllRegistrationsAreValid();
 		}

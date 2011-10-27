@@ -5,9 +5,9 @@
 	using Infrastructure;
 	using log4net;
 
-	public class UnhandledTaskExceptions : IRunOnApplicationStart
+	public class UnhandledTaskExceptions : IConfigureOnStartup
 	{
-		public void Start(IWindsorContainer container)
+		public void Configure(IWindsorContainer container)
 		{
 			// this will handle unobserved task exceptions instead of killing the application
 			TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;

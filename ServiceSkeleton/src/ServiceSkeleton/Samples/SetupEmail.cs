@@ -4,9 +4,9 @@
 	using Castle.Windsor;
 	using Infrastructure;
 
-	public class SetupEmail : IRunOnApplicationStart
+	public class SetupEmail : IConfigureOnStartup
 	{
-		public void Start(IWindsorContainer container)
+		public void Configure(IWindsorContainer container)
 		{
 			// todo make a settings file entry for email debug mode
 			var emailDebugMode = true; // Settings.Default.EmailDebugMode;
