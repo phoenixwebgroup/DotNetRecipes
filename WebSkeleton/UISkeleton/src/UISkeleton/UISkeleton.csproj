@@ -105,18 +105,21 @@
   <ItemGroup>
     <Compile Include="Infrastructure\ActionDescriptorExtensions.cs" />
     <Compile Include="Infrastructure\ExportFilter.cs" />
+    <Compile Include="Infrastructure\SetupControllerFactory.cs" />
     <Compile Include="Infrastructure\TableFilter.cs" />
     <Compile Include="Infrastructure\WindsorControllerFactory.cs" />
+    <Compile Include="Samples\SetupMessageBus.cs" />
     <Compile Include="Samples\PageActionsSecurity.cs" />
     <Compile Include="Samples\RouteRegistry.cs" />
     <Compile Include="Infrastructure\SetJsonRequestBehaviorGlobally.cs" />
     <Compile Include="Samples\FubuRegistry.cs" />
-    <Compile Include="Infrastructure\IRunOnApplicationStart.cs" />
+    <Compile Include="Infrastructure\IConfigureOnStartup.cs" />
     <Compile Include="Infrastructure\LocatorAsyncActionInvoker.cs" />
     <Compile Include="Samples\ModelBindersInit.cs" />
     <Compile Include="Infrastructure\MySparkView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Samples\HtmlConventions.cs" />
+    <Compile Include="Infrastructure\ValidateContainerOnStartup.cs" />
     <Compile Include="Samples\WebEndpoint.cs" />
     <Compile Include="Samples\WebRegistry.cs" />
   </ItemGroup>

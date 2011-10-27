@@ -12,7 +12,7 @@ namespace UISkeleton.Samples
 	using HtmlTags.UI.Helpers;
 	using Infrastructure;
 
-	public class FubuRegistry : ExtendedRegistryBase, IRunOnApplicationStart
+	public class FubuRegistry : ExtendedRegistryBase, IConfigureOnStartup
 	{
 		public FubuRegistry()
 		{
@@ -25,7 +25,7 @@ namespace UISkeleton.Samples
 			AddComponent<ITypeResolver, TypeResolver>();
 		}
 
-		public void Start(IWindsorContainer container)
+		public void Configure(IWindsorContainer container)
 		{
 			var library = container.Resolve<TagProfileLibrary>();
 			var conventions = container.Resolve<HtmlConventionRegistry>();

@@ -5,7 +5,7 @@ namespace UISkeleton.Samples
 	using Castle.Windsor;
 	using Infrastructure;
 
-	public class RouteRegistry : IRunOnApplicationStart
+	public class RouteRegistry : IConfigureOnStartup
 	{
 		protected static void IgnoreAxds(RouteCollection routes)
 		{
@@ -41,7 +41,7 @@ namespace UISkeleton.Samples
 				);
 		}
 
-		public void Start(IWindsorContainer container)
+		public void Configure(IWindsorContainer container)
 		{
 			var routes = RouteTable.Routes;
 			RegisterRoutes(routes);

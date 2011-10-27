@@ -6,50 +6,27 @@ namespace UISkeleton.Samples
 	using Castle.MicroKernel.Registration;
 	using Castle.Windsor;
 	using GotFour.Windsor;
-	using GotFour.Windsor.Testing;
 	using HtmlTags.UI.Helpers;
-	using Spark.Web.Mvc;
 	using Infrastructure;
+	using Spark.Web.Mvc;
 
 	public class WebEndpoint : HttpApplication
 	{
 		protected void Application_Start()
 		{
 			Container = new ExtendedContainer();
-			SetupComponents(Container);
-			SetControllerFactory(Container);
-			// todo
-			//SetupMessageBus();
+			LoadRegistrations(Container);
+			ScanIn<IConfigureOnStartup>(Container);
+			RunStartupConfigurations(Container);
 			ViewEngines.Engines.Add(new SparkViewFactory());
 			HtmlContentExtensions.DefaultScriptLocation = "~/Scripts/";
 			HtmlContentExtensions.DefaultStyleSheetLocation = "~/Content/css/";
 		}
 
-		// todo if you want to use the messaging framework, configure it here
-		//private void SetupMessageBus()
-		//{
-		//    MessageBusConfiguration.ForWeb();
-		//    MessagingBusFactory.BusWriter = new WebBusWriter();
-		//}
-		
 		protected ExtendedContainer Container
 		{
 			get { return (Application.Get("ServiceLocator") as ExtendedContainer); }
 			set { Application.Set("ServiceLocator", value); }
-		}
-
-		protected virtual void SetupComponents(IWindsorContainer container)
-		{
-			LoadRegistrations(container);
-			ScanIn<IRunOnApplicationStart>(container);
-			Init(container);
-			ExtendedContainer.Instance.ExpectAllRegistrationsAreValid();
-		}
-
-		private void SetControllerFactory(IWindsorContainer container)
-		{
-			var factory = container.Resolve<IControllerFactory>();
-			ControllerBuilder.Current.SetControllerFactory(factory);
 		}
 
 		private static void LoadRegistries(IWindsorContainer container)
@@ -66,12 +43,10 @@ namespace UISkeleton.Samples
 			//container.Register(AllTypes.FromAssemblyContaining<TypeInAnotherProjectToScan>().BasedOn<T>());
 		}
 
-		public void Init(IWindsorContainer container)
+		public void RunStartupConfigurations(IWindsorContainer container)
 		{
-			container.ResolveAll<IRunOnApplicationStart>()
-				.ForEach(i => i.Start(container));
-
-			new HtmlConventions().Start(container);
+			container.ResolveAll<IConfigureOnStartup>()
+				.ForEach(i => i.Configure(container));
 		}
 
 		public void LoadRegistrations(IWindsorContainer container)
