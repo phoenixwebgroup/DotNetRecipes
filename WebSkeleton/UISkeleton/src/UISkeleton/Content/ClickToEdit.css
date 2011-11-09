@@ -1,0 +1,40 @@
+td.clickToEditCell
+{
+	background-color: lightyellow;
+	border-bottom: 1px dashed darkblue;
+}
+
+.clickToEditDisplay
+{
+}
+
+.clickToEditInput
+{
+}
+
+.clickToEditIcon
+{
+	display: inline-block;
+	background: url("../images/icons/pencil.png") no-repeat scroll 0 0 transparent;
+	width: 16px;
+	height: 16px;
+	margin-left: 3px;
+}
+
+.clickToEditSave
+{
+	display: inline-block;
+	background: url("../images/icons/disk.png") no-repeat scroll 0 0 transparent;
+	width: 16px;
+	height: 16px;
+	margin-left: 3px;
+}
+
+.clickToEditCancel
+{
+	display: inline-block;
+	background: url("../images/icons/cross.png") no-repeat scroll 0 0 transparent;
+	width: 16px;
+	height: 16px;
+	margin-left: 3px;
+}

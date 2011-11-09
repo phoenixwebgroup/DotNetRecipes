@@ -1,0 +1,25 @@
+.selectlist-choices
+{
+	float:left;
+	min-width: 100px;
+	margin-right: 10px;
+}
+.selectlist-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+.selectlist-item {
+	/* Icon from http://pinvoke.com/ */
+	background: #fff url(cross-circle.png) no-repeat right center;
+	border-left: solid 1px #eee;
+	border-top: solid 1px #eee;
+	border-right: solid 2px #ccc;
+	border-bottom: solid 2px #ccc;
+	cursor: pointer;
+	padding: 0.2em 0.3em;
+	margin: 1px 0;
+	padding-right: 30px;
+}

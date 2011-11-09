@@ -1,0 +1,24 @@
+.spinner, .ajaxError
+{
+	display: none;
+	z-index: 1000;
+	top: 40%;
+	left: 35%;
+	background-color: #565656;
+	color: white;
+	position: absolute;
+	padding: 1em;
+	width: 150px;
+	text-align: center;
+	opacity: 0.8;
+	
+	/*borders aren't working in FF 3.6.6*/
+	-webkit-border-radius: '10px';
+	-moz-border-radius: '10px';
+	border-radius: '10px';
+}
+
+.ajaxError
+{
+	background-color: red;
+}
