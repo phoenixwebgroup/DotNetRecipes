@@ -1,15 +1,9 @@
 namespace UISkeleton.Infrastructure
 {
 	using System.Web.Mvc;
-	using JoinedFilter;
 
-	public class SetJsonRequestBehaviorGlobally : IJoinedFilter, IResultFilter
+	public class SetJsonRequestBehaviorGlobally : IResultFilter
 	{
-		public bool JoinsTo(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
-		{
-			return true;
-		}
-
 		public void OnResultExecuting(ResultExecutingContext filterContext)
 		{
 			if (filterContext.Result is JsonResult)

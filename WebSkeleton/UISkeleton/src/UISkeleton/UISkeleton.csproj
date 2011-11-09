@@ -64,12 +64,6 @@
     <Reference Include="HtmlTags.UI">
       <HintPath>..\packages\DotNetExtensions-UiConventions.2.1.4199.41827\lib\net40\HtmlTags.UI.dll</HintPath>
     </Reference>
-    <Reference Include="JoinedFilter">
-      <HintPath>..\packages\MVC-JoinedFilter.1.1.4177.31311\lib\net40\JoinedFilter.dll</HintPath>
-    </Reference>
-    <Reference Include="JoinedFilter.Windsor">
-      <HintPath>..\packages\MVC-JoinedFilter.Windsor.1.1.4177.31549\lib\net40\JoinedFilter.Windsor.dll</HintPath>
-    </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
     </Reference>
@@ -104,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Infrastructure\ActionDescriptorExtensions.cs" />
+    <Compile Include="Infrastructure\FilterRegistry.cs" />
     <Compile Include="Infrastructure\ExportFilter.cs" />
     <Compile Include="Infrastructure\SetupControllerFactory.cs" />
     <Compile Include="Infrastructure\TableFilter.cs" />
@@ -116,7 +111,6 @@
     <Compile Include="Infrastructure\SetJsonRequestBehaviorGlobally.cs" />
     <Compile Include="Samples\FubuRegistry.cs" />
     <Compile Include="Infrastructure\IConfigureOnStartup.cs" />
-    <Compile Include="Infrastructure\LocatorAsyncActionInvoker.cs" />
     <Compile Include="Samples\ModelBindersInit.cs" />
     <Compile Include="Infrastructure\MySparkView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,7 +124,9 @@
     <None Include="Skeleton-UI.nuspec" />
     <None Include="Views\Shared\AjaxForm.spark" />
     <None Include="Views\Shared\Site.spark" />
-    <None Include="Views\Shared\TwoColumnForm.spark" />
+    <None Include="Views\Shared\TwoColumnForm.spark">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Views\Shared\_AjaxLoading.spark" />
     <None Include="Views\Shared\_Includes.spark" />
     <None Include="Views\Shared\_KoPager.spark" />
