@@ -120,11 +120,11 @@
     <Compile Include="Samples\WebRegistry.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="configs\authentication.config" />
-    <None Include="configs\authorization.dev.config" />
-    <None Include="configs\log4net.dev.config" />
-    <None Include="configs\smtp.dev.config" />
-    <None Include="configs\spark.dev.config" />
+    <None Include="config\authentication.config" />
+    <None Include="config\authorization.dev.config" />
+    <None Include="config\log4net.dev.config" />
+    <None Include="config\smtp.dev.config" />
+    <None Include="config\spark.dev.config" />
     <None Include="packages.config" />
     <None Include="Skeleton-UI.nuspec" />
     <None Include="Views\Shared\AjaxForm.spark" />
