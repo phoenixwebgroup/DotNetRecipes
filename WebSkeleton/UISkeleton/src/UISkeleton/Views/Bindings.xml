@@ -4,7 +4,7 @@
 	
 	<element name="SaveOrCancel">ViewConventionExtensions.SaveOrCancel()</element>
 	<element name="MakeFormsAjax">Ajax.MakeFormsAjax()</element>
-	<element name="UseClientSideValidation">Html.ClientSideValidation()</element>
+
 	<element name="FilterFormAutoSubmit">Html.ScriptInclude("FilterFormAutoSubmit.js")</element>
 	<element name="UseRowSelect">Html.ScriptInclude("PageActions.RowSelect.js")</element>
 
@@ -52,6 +52,5 @@
 	<element name="KnockoutModel">new KnockoutSerializer&lt;@For&gt;().WriteJavascript()</element>
 	<element name="Serialize">Serialize.Javascript(@Object)</element>
 	<element name="Render">#Html.RenderAction("@Action");</element>
-	<element name="AuditBid">#Html.RenderAction("BidLastEdited", "Auditing", new {bidNumber = Model.BidNumber, path = "@Path"});</element>
 	
 </bindings>
