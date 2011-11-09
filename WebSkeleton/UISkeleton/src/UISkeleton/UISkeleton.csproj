@@ -120,6 +120,11 @@
     <Compile Include="Samples\WebRegistry.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="configs\authentication.config" />
+    <None Include="configs\authorization.dev.config" />
+    <None Include="configs\log4net.dev.config" />
+    <None Include="configs\smtp.dev.config" />
+    <None Include="configs\spark.dev.config" />
     <None Include="packages.config" />
     <None Include="Skeleton-UI.nuspec" />
     <None Include="Views\Shared\AjaxForm.spark" />
@@ -131,6 +136,7 @@
     <None Include="Views\Shared\_Includes.spark" />
     <None Include="Views\Shared\_KoPager.spark" />
     <None Include="Views\Shared\_Menu.spark" />
+    <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\autoSuggest.css" />
